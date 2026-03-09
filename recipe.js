@@ -63,7 +63,7 @@ const hamburger = document.getElementById('hamburger')
 const navRight = document.getElementById('nav-right')
 hamburger.addEventListener('click', () => navRight.classList.toggle('active'))
 
-fetch('http://127.0.0.1:5000/get-recipe', {
+fetch('https://kitchenpal.onrender.com/get-recipe', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({ id: recipeId })
@@ -111,7 +111,7 @@ gachaBtn.addEventListener('click', (e) => {
     window.location.href = 'home.html?gacha=true'
 })
 
-fetch('http://127.0.0.1:5000/random-recipes')
+fetch('https://kitchenpal.onrender.com/random-recipes')
     .then(res => res.json())
     .then(data => {
         const container = document.getElementById('suggested-container')
