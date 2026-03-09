@@ -76,7 +76,7 @@ gachaBtn.addEventListener('click', (e) => {
     heading.textContent = '🎰 Gacha Recipes!!'
     container.innerHTML = '<p style="text-align:center; color: var(--para-color)">Rolling... 🎲</p>'
 
-    fetch('http://127.0.0.1:5000/random-recipes')
+    fetch('https://kitchenpal.onrender.com/random-recipes')
         .then(res => res.json())
         .then(data => {
             container.innerHTML = ''
@@ -190,7 +190,7 @@ findRecipesBtn.addEventListener('click', () => {
     findRecipesBtn.textContent = 'Searching... 🔍'
     findRecipesBtn.disabled = true
 
-    fetch('http://127.0.0.1:5000/find-recipes', {
+    fetch('https://kitchenpal.onrender.com/find-recipes', {
          method: 'POST',
          headers: {'Content-Type': 'application/json'},
          body: JSON.stringify({ ingredients: ingredientsList})
@@ -216,7 +216,7 @@ const loadSuggestedRecipes = () => {
         return
     }
 
-    fetch('http://127.0.0.1:5000/random-recipes')
+    fetch('https://kitchenpal.onrender.com/random-recipes')
         .then(res => res.json())
         .then(data => {
             localStorage.setItem('suggestedRecipes', JSON.stringify(data.results))
@@ -232,7 +232,7 @@ if (new URLSearchParams(window.location.search).get('gacha') === 'true') {
     heading.textContent = '🎰 Gacha Recipes!!'
     container.innerHTML = '<p style="text-align:center; color: var(--para-color)">Rolling... 🎲</p>'
 
-    fetch('http://127.0.0.1:5000/random-recipes')
+    fetch('https://kitchenpal.onrender.com/random-recipes')
         .then(res => res.json())
         .then(data => {
             container.innerHTML = ''
@@ -309,7 +309,7 @@ cameraInput.addEventListener('change', () => {
         scanBtn.textContent = 'Scanning... 🔍'
         scanBtn.disabled = true
 
-        fetch('http://127.0.0.1:5000/scan-ingredients', {
+        fetch('https://kitchenpal.onrender.com/scan-ingredients', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({ image: base64 })
