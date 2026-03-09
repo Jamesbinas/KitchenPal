@@ -8,7 +8,8 @@ import base64
 app = Flask(__name__)
 CORS(app, origins=["*"])
 
-API_KEY = "5c424e550e194b63995ba439ee89e108"
+import os
+API_KEY = os.environ.get("SPOONACULAR_API_KEY")
 
 @app.route('/find-recipes', methods=['POST'])
 def find_recipes():
