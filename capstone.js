@@ -169,7 +169,7 @@ const displayResults = (recipes) => {
         card.className = 'home-cards'
         card.innerHTML = `
         <img class="home-img" src="${recipe.image}" alt="${recipe.title}">
-        <h3>${recipe.title}</h3>
+        <h3>${recipe.title.length > 40 ? recipe.title.slice(0, 40) + "..." : recipe.title}</h3>
         <div class="Tags">
             ${recipe.missedIngredients.map(i => `<span>${i.name}</span>`).join('')}
         </div>
