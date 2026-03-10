@@ -207,6 +207,7 @@ findRecipesBtn.addEventListener('click', () => {
 } )
 
 const loadSuggestedRecipes = () => {
+    container.innerHTML = '<p style="text-align:center; color: var(--par-color)">Waking up the server, please wait...</p>'
     const saved = localStorage.getItem('suggestedRecipes')
     const savedTime = localStorage.getItem('suggestedTime')
     const now = Date.now()
@@ -277,7 +278,6 @@ const displayRandomResults = (recipes) => {
         container.appendChild(card)
     })
 }
-container.innerHTML = '<p style="text-align:center; color: var(--par-color)">Waking up the server, please wait...</p>'
 loadSuggestedRecipes()
 
 document.getElementById('fav-btn').addEventListener('click', (e) => {
