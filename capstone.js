@@ -183,6 +183,7 @@ const displayResults = (recipes) => {
 const findRecipesBtn = document.getElementById('find-recipes-btn')
 
 findRecipesBtn.addEventListener('click', () => {
+    container.innerHTML = '<p style="text-align:center; color: var(--par-color)">Waking up the server, please wait...</p>'
     if(ingredientsList.length === 0) {
         alert('Please add at least one ingredient first! 🥺') 
        return
@@ -276,7 +277,7 @@ const displayRandomResults = (recipes) => {
         container.appendChild(card)
     })
 }
-
+container.innerHTML = '<p style="text-align:center; color: var(--par-color)">Waking up the server, please wait...</p>'
 loadSuggestedRecipes()
 
 document.getElementById('fav-btn').addEventListener('click', (e) => {
