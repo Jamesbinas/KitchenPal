@@ -295,7 +295,9 @@ cameraInput.accept = 'image/*'
 cameraInput.capture = 'environment'
 
 scanBtn.addEventListener('click', () => {
-    cameraInput.click()
+    alert ("Scan feature coming soon ")
+
+   /*cameraInput.click()
 })
 
 cameraInput.addEventListener('change', () => {
@@ -330,6 +332,6 @@ cameraInput.addEventListener('change', () => {
             scanBtn.textContent = 'Scan Ingredients'
             scanBtn.disabled = false
         })
-    }
-})
+    }*/
+}) 
 
