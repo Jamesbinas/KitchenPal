@@ -217,7 +217,6 @@ const loadSuggestedRecipes = () => {
         displayRandomResults(JSON.parse(saved))
         return
     }
-container.innerHTML = '<p style="text-align:center; color: var(--par-color)">Waking up the server, please wait...</p>'
     fetch('https://kitchenpal.onrender.com/random-recipes')
         .then(res => res.json())
         .then(data => {
