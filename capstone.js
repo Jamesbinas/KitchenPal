@@ -183,6 +183,7 @@ const displayResults = (recipes) => {
 const findRecipesBtn = document.getElementById('find-recipes-btn')
 
 findRecipesBtn.addEventListener('click', () => {
+    const container = document.getElementById('card-container')
     container.innerHTML = '<p style="text-align:center; color: var(--par-color)">Waking up the server, please wait...</p>'
     if(ingredientsList.length === 0) {
         alert('Please add at least one ingredient first! 🥺') 
