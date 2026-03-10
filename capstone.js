@@ -207,6 +207,7 @@ findRecipesBtn.addEventListener('click', () => {
 } )
 
 const loadSuggestedRecipes = () => {
+    const container = document.getElementById('card-container')
     container.innerHTML = '<p style="text-align:center; color: var(--par-color)">Waking up the server, please wait...</p>'
     const saved = localStorage.getItem('suggestedRecipes')
     const savedTime = localStorage.getItem('suggestedTime')
