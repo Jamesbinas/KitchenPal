@@ -215,7 +215,7 @@ const loadSuggestedRecipes = () => {
         displayRandomResults(JSON.parse(saved))
         return
     }
-
+container.innerHTML = '<p style="text-align:center; color: var(--par-color)">Waking up the server, please wait...</p>'
     fetch('https://kitchenpal.onrender.com/random-recipes')
         .then(res => res.json())
         .then(data => {
@@ -241,7 +241,7 @@ if (new URLSearchParams(window.location.search).get('gacha') === 'true') {
                 card.className = 'home-cards'
                 card.innerHTML = `
                     <img class="home-img" src="${recipe.image}" alt="${recipe.title}">
-                    <h3>${recipe.title}</h3>
+                    <h3>${recipe.title.length > 40 ? recipe.title.slice(0, 40) + "..." : recipe.title}</h3>
                     <div class="Tags">
                         ${recipe.extendedIngredients.slice(0,5).map(i => `<span>${i.name}</span>`).join('')}
                     </div>
