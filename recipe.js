@@ -77,7 +77,7 @@ fetch('https://kitchenpal.onrender.com/get-recipe', {
 
     data.extendedIngredients.forEach(ingredient => {
         const li = document.createElement('li')
-        li.textContent = ingredient.original.length > 40 ? ingredient.original.slice(0, 40) + "..." : ingredient.original
+        li.textContent = ingredient.original
         document.getElementById('ingredients-list').appendChild(li)
     })
 

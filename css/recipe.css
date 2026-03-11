@@ -188,6 +188,9 @@ nav a:hover {
   padding: 8px 14px;
   background: var(--bg-main);
   border-radius: 999px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
   border-left: 3px solid var(--btn-secondary);
   font-weight: 400;
   transition: transform 0.2s ease;
